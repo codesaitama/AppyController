@@ -8,19 +8,13 @@
     <link href="~/assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-
-    <!--Data Table-->
-    @*<link href="~/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />*@
-    <link href="~/assets/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
-    <link href="~/assets/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap.min.css" rel="stylesheet" />
-    <link href="~/assets/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
-
     <!-- Icons -->
     <link href="~/assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
     <link href="~/assets/js/plugins/fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
     <!-- CSS Files -->
     <link href="~/assets/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
+    <link href="~/css/custom.css" rel="stylesheet" />
     @RenderSection("Styles", required: false)
 </head>
 <body class="">
@@ -32,7 +26,7 @@
             </button>
             <!-- Brand -->
             <a class="navbar-brand pt-0" asp-controller="Home" asp-action="index">
-                <img src="~/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="~/images/persol.png" class="navbar-brand-img" alt="..." />
             </a>
             <!-- User -->
             <ul class="nav align-items-center d-md-none">
@@ -204,7 +198,8 @@
     <!--   Argon JS   -->
     <script src="~/assets/js/argon-dashboard.min.js?v=1.1.2"></script>
     <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-    <script src="~/js/saitama/Master.js"></script>
+    <script src="~/js/saitama/Helpers/DateHandler.js" asp-append-version="true"></script>
+    <script src="~/js/saitama/Helpers/Master.js" asp-append-version="true"></script>
     <script>
         window.TrackJS &&
             TrackJS.install({

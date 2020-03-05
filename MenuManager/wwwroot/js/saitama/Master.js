@@ -1,1 +1,0 @@
-﻿const DataTablelengthMenu = [5, 10, 20];

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Payroll HCM Lite",
+    "status": 1,
+    "description": "",
+    "prefix": "PHL",
+    "url": "http://psl-app-vm3/hcm-lite.UI",
+    "createdDate": "2020-01-22 16:28:21.493"
+  },
+  {
+    "id": 2,
+    "name": "Persol HCM",
+    "status": 0,
+    "description": "",
+    "prefix": "PH",
+    "url": "http://psl-app-vm3/persol-hcm",
+    "createdDate": "2020-01-22 16:28:21.493"
+  },
+  {
+    "id": 3,
+    "name": "HCM Global Admin",
+    "status": 1,
+    "description": "",
+    "prefix": "PHGA",
+    "url": "http://psl-app-vm3/hcm-admin",
+    "createdDate": "2020-01-22 16:28:21.493"
+  },
+  {
+    "id": 4,
+    "name": "HCM Client Admin",
+    "status": 1,
+    "description": "",
+    "prefix": "PHCA",
+    "url": "http://psl-app-vm3/hcm-manager",
+    "createdDate": "2020-01-22 16:28:21.493"
+  }
+]
