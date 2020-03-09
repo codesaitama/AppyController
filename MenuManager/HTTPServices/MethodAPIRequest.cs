@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using System.Text;
 
 namespace MenuManager.HTTPServices
 {
@@ -18,28 +20,33 @@ namespace MenuManager.HTTPServices
         {
             Configuration = configuration;
         }
-        public async Task<JArray> GetRequestAsync(String url)
+        public async Task<string> MakeRequestAsync(string url, string method, object dataToSend = null)
         {
-            JArray data = null;
-            try
+            string data = null;
+            HttpResponseMessage response = null;
+            switch (method)
             {
-                HttpResponseMessage response = await client.GetAsync(url);
-                //client.BaseAddress = new Uri(Configuration["APISETTINGS:APISETTINGS"]);
-                if (response.IsSuccessStatusCode)
-                {
-                    var responseContent = await response.Content.ReadAsStringAsync();
-                    data = JArray.Parse(responseContent);
-                    return data;
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-                {
-                    return data;
-                }
-
+                case "GET":
+                    response = await client.GetAsync(url);
+                    break;
+                case "POST":
+                    response = await client.PostAsync(url, new StringContent(dataToSend.ToString(), Encoding.UTF8, "application/json"));
+                    break;
+                case "PUT":
+                    response = await client.PutAsync(url, new StringContent(dataToSend.ToString(), Encoding.UTF8, "application/json"));
+                    break;
+                case "DELETE":
+                    response = await client.DeleteAsync(url);
+                    break;
             }
-            catch (HttpRequestException e)
+            if (response.IsSuccessStatusCode)
             {
-                Console.WriteLine(e.Message);
+                var responseContent = await response.Content.ReadAsStringAsync();
+                data = responseContent;
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                return "Unauthorized";
             }
             return data;
         }
