@@ -13,7 +13,7 @@
             createProjectTable(data, '#project-tbody');
     }
 
-    makeAPIRequest('api/project/getprojects', 'GET').then(data => data.json()).then(data => console.log(data))
+    makeAPIRequest('/project/getprojects', 'GET').then(data => data.json()).then(data => console.log(data))
 
     function createProjectTable(data, tableId) {
         let view = ''

@@ -26,17 +26,21 @@ function makeAPIRequest(url, method, data = "") {
     }
 
     function getRequest(url) {
-        return fetch(url).then()
+        let return_data = null;
+        fetch(url).then(data => return_data = data);
+        return return_data;
     }
 
     function postOtPutRequest(url, method, data) {
-        return fetch(url, {
+        let return_data = null;
+        fetch(url, {
             method: method,
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
-        }).then()
+        }).then((x) => return_data = x);
+        return return_data;
     }
 
 }

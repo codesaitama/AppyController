@@ -22,7 +22,7 @@ namespace MenuManager.Controllers
         }
 
 
-        [HttpGet("api/project/getprojects")]
+        [HttpGet("home/project/getprojects")]
         public async Task<object> GetAllProjects()
         {
             var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Menus/GetAllMenus";
