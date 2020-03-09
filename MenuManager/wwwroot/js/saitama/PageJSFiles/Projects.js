@@ -9,9 +9,11 @@
     readExternalFile(file = "/Data/Projects.json", mime = 'json', loadAPIData);
 
     function loadAPIData(data) {
-        data = JSON.parse(data);
-        createProjectTable(data, '#project-tbody');
+            data = JSON.parse(data);
+            createProjectTable(data, '#project-tbody');
     }
+
+    makeAPIRequest('api/project/getprojects', 'GET').then(data => data.json()).then(data => console.log(data))
 
     function createProjectTable(data, tableId) {
         let view = ''
