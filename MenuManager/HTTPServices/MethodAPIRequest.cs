@@ -24,7 +24,6 @@ namespace MenuManager.HTTPServices
             try
             {
                 HttpResponseMessage response = await client.GetAsync(url);
-                //client.BaseAddress = new Uri(Configuration["APISETTINGS:APISETTINGS"]);
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = await response.Content.ReadAsStringAsync();

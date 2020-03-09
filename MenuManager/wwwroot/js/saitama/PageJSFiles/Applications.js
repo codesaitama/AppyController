@@ -66,25 +66,28 @@
 
         for (let x = 0; x < elements.length; x++) {
             elements[x].addEventListener('click', function (e) {
-                getRowFunction(this)
+                getDataByID(this.id)
             });
         }
     }
 
-    function getRowFunction(el) {
-        var n = el.parentNode.parentNode.cells
-        let data = [];
+    function getDataByID(outsideId) {
+        readExternalFile(file = "/Data/Applications.json", mime = 'json', loadData);
+        outsideId = Number(outsideId);
 
-        for (let x = 0; x < n.length; x++) { data.push(n[x].textContent.trim()) }
-
-        let selectedRowData = { id: el.id, name: data[0], status: data[1] == "Active" ? 1 : 0, date: data[2] };
-        populateInputFields(selectedRowData);
+        function loadData(data) {
+            data = JSON.parse(data);
+            data = data.filter(function (x) { return x.id == outsideId });
+            populateInputFields(data[0])
+        }
     }
 
     function populateInputFields(data) {
         document.querySelector('#description').value = data.name;
-        document.querySelector('#notes').value = 'Empty';
-        document.querySelector('#status').value = data.status;
+        document.querySelector('#notes').value = data.description != null ? data.description : 'Empty';
+        document.querySelector('#txtWebsite').value = data.url;
+        document.querySelector('#txtPrefix').value = data.prefix;
+        document.querySelector('#slctProject').value = data.projectID;
         document.querySelector('#btnSave').innerText = 'Update';
 
         $('#appModal').modal('toggle');
