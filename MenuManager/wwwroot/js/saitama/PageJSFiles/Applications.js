@@ -6,18 +6,22 @@
         0: { color: 'danger', state: 'Inactive' }
     };
 
-    readExternalFile(file = "/Data/Applications.json", mime = 'json', loadAPIData);
-
-    readExternalFile(file = "/Data/Projects.json", mime = 'json', loadForSelectBox);
+    makeAPIRequest('/api/project/getprojects', 'GET', '', loadForSelectBox);
 
     function loadForSelectBox(data) {
         data = JSON.parse(data);
+
         var options = '<option value="-1" disabled selected >Select Project</option>';
-        $(data).each(function (key, value) {
-            options += '<option value="' + value.id + '">' + value.name + '</option>';
+        data.forEach((element) => {
+            options += '<option value="' + element.id + '">' + element.projectName + '</option>';
         });
-        $("#slctProject").html(options);
+
+        document.querySelector('#slctProject').innerHTML = options;
     }
+
+    document.querySelector('#slctProject').addEventListener('change', function () {
+        makeAPIRequest('/api/application/getapplicationbyprojectid/' + this.value, 'GET', '', loadAPIData);
+    });
 
     function loadAPIData(data) {
         data = JSON.parse(data);

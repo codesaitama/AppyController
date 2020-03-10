@@ -42,5 +42,12 @@ namespace MenuManager.Controllers
             var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Projects/{projectId}";
             return await methodAPIRequest.MakeRequestAsync(endpoint, "PUT", data);
         }
+
+        [HttpGet("api/application/getapplicationbyprojectid/{projectId}")]
+        public async Task<object> GetApplicationsByProjectId(string projectId)
+        {
+            var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}spGetAllApplicationByProjectId/{projectId}";
+            return await methodAPIRequest.MakeRequestAsync(endpoint, "GET", null);
+        }
     }
 }
