@@ -5,3 +5,11 @@
 .table th, .table td{
     padding: 0.3rem;
 }
+
+/*.iziToast-theme-light{
+    
+}*/
+
+.success-color {
+    background-color: lightgreen;
+}

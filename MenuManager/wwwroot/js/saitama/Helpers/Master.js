@@ -52,25 +52,23 @@ function makeAPIRequest(url, method, data = "", callback) {
 
 function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
     });
 }
 
-function setColorToToastr(color) {
-    let elements = document.getElementsByClassName('iziToast-theme-light');
-    for (let x = 0; x < elements.length; x++) {
-        elements[x].style.backgroundColor = color
+function setColorToToastr(state) {
+    if (state == true){
+        $('.iziToast-theme-light').addClass('success-color');
+    } else {
+        $('.iziToast-theme-light').removeClass('success-color');
     }
-}
-
-
-
+}   
 
 function messenger(message) {
     switch (message.toLowerCase()) {
         case 'success':
-            setColorToToastr('lightgreen');
+            setColorToToastr(true);
             iziToast.show({
                 color: color,
                 icon: 'fa fa-check',
@@ -79,7 +77,7 @@ function messenger(message) {
             });
             break;
         case 'error':
-            setColorToToastr('red')
+            setColorToToastr(false)
             iziToast.show({
                 color: 'red',
                 icon: 'fa fa-times',
@@ -88,7 +86,7 @@ function messenger(message) {
             });
             break;
         case 'warning':
-            setColorToToastr('lightblue')
+            setColorToToastr(false)
             iziToast.show({
                 color: 'yellow',
                 icon: 'fa fa-warning',
@@ -97,7 +95,6 @@ function messenger(message) {
             });
             break;
         case 'unknown':
-            document.querySelector('.iziToast-theme-light').style.backgroundColor = 'lightblue'
             iziToast.show({
                 color: 'blue',
                 icon: 'fa fa-info',
@@ -106,4 +103,17 @@ function messenger(message) {
             });
             break;
     }
+}
+
+function GetCurrentPageName() {
+    var url = window.location.pathname;
+    return url.substring(url.lastIndexOf('/') + 1);
+}
+
+lightMenu(GetCurrentPageName().toLowerCase());
+
+function lightMenu(page) {
+    page ? page : page = 'dashboard'
+    $('#' + page).addClass('active');
+    $('#' + page + ' > a').addClass('active');
 }
