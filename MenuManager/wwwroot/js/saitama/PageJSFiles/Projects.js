@@ -60,7 +60,14 @@
         $('#projectsModal').modal('toggle');
         saveOrUpdate = 0;
         document.querySelector('#btnSave').innerText = 'Add';
+        clearFields();
     });
+
+    function clearFields() {
+        document.querySelector('textarea').value = "";
+        document.querySelector('select').value = -1;
+        document.querySelector('#description').value = "";
+    }
 
     function bindButtonsToDOM() {
         let elements = document.getElementsByClassName('editButton');

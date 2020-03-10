@@ -22,14 +22,12 @@
     }
 
     document.querySelector('#slctProject').addEventListener('change', function () {
-        makeAPIRequest('/api/application/getapplicationbyprojectid/' + this.value, 'GET', '', loadAPIData);
+        makeAPIRequest('/api/application/getapplicationbyprojectid/' + this.value, 'GET', '', function (data) {
+            if (data) {
+                createAppsTable(JSON.parse(data), '#apps-tbody');
+            }
+        });
     });
-
-    function loadAPIData(data) {
-        if (data) {
-            createAppsTable(JSON.parse(data), '#apps-tbody');
-        }
-    }
 
     function createAppsTable(data, tableId) {
         let view = ''
