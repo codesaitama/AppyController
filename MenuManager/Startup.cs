@@ -37,7 +37,11 @@ namespace MenuManager
             services.AddSingleton(config);
 
             services.AddControllersWithViews();
+<<<<<<< HEAD
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+=======
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+>>>>>>> 4167d2926495857a7ef71b8a768e9f34fa894f66
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
