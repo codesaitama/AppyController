@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
 
     let dt = new DateHandler();
+    let saveLoadedData = [];
+    let saveOrUpdate = 0; 
     let sub = {
         1: { color: 'success', state: 'Active' },
         0: { color: 'danger', state: 'Inactive' }
@@ -24,14 +26,17 @@
     });
 
     function loadAPIData(data) {
-        data = JSON.parse(data);
-        createAppsTable(data, '#apps-tbody');
+        if (data) {
+            createAppsTable(JSON.parse(data), '#apps-tbody');
+        }
     }
 
     function createAppsTable(data, tableId) {
         let view = ''
-
+        saveLoadedData = [];
         data.forEach(element => {
+            element.status = 1;
+            saveLoadedData.push(element)
             view += `
                     <tr>
                         <td>
@@ -46,7 +51,7 @@
                             </span>
                         </td>
                         <td class="">
-                            ${dt.calendarFormat(element.createdDate, '-')}
+                            ${dt.calendarFormat(element.createdAt, '-')}
                         </td>
                         <td class="text-center">
                             <a href="#" class="text-inverse editButton" id="${element.id}" title="Edit"><i class="fas fa-edit"></i></a>
@@ -62,6 +67,7 @@
 
     document.querySelector('#btnAddApp').addEventListener('click', function () {
         $('#appModal').modal('toggle');
+        saveOrUpdate = 0;
         document.querySelector('#btnSave').innerText = 'Add';
     });
 

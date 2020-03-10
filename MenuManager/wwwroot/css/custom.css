@@ -13,3 +13,7 @@
 .success-color {
     background-color: lightgreen;
 }
+
+.app-header-row{
+    margin: 5px !important;
+}

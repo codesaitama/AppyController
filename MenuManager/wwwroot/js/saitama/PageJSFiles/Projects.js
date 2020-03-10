@@ -15,8 +15,10 @@
     }
 
     function loadAPIData(data) {
-        data = JSON.parse(data);
-        createProjectTable(data, '#project-tbody');
+        if (data) {
+            data = JSON.parse(data);
+            createProjectTable(data, '#project-tbody');
+        }
     }
   
 
