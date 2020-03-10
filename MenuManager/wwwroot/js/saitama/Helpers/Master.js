@@ -29,13 +29,13 @@ function makeAPIRequest(url, method, data = "", callback) {
     }
 
     function getRequest(url, callback) {
-        fetch(url).then(data => data.text()).then(data => callback(data));
+        fetch(url).then(data => data.text()).then(data => callback(data)).catch((error) => callback(error));
     }
 
     function deleteRequest(url, callback) {
         fetch(url, {
             method: 'DELETE',
-        }).then(res => res.text()).then(data => callback(data));
+        }).then(res => res.text()).then(data => callback(data)).catch((error) => callback(error));
     }
 
     function postOtPutRequest(url, method, data, callback) {

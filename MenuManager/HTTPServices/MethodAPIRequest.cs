@@ -10,7 +10,7 @@ using System.Text;
 
 namespace MenuManager.HTTPServices
 {
-    public class MethodAPIRequest
+    public class MethodAPIRequest : HelperInterface
     {
 
         static readonly HttpClient client = new HttpClient();

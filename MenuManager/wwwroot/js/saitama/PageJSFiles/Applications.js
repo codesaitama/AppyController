@@ -3,6 +3,7 @@
     let dt = new DateHandler();
     let saveLoadedData = [];
     let saveOrUpdate = 0; 
+    let applicationId = null;
     let sub = {
         1: { color: 'success', state: 'Active' },
         0: { color: 'danger', state: 'Inactive' }
@@ -79,15 +80,11 @@
         }
     }
 
-    function getDataByID(outsideId) {
-        readExternalFile(file = "/Data/Applications.json", mime = 'json', loadData);
-        outsideId = Number(outsideId);
-
-        function loadData(data) {
-            data = JSON.parse(data);
-            data = data.filter(function (x) { return x.id == outsideId });
-            populateInputFields(data[0])
-        }
+    function getDataByID(rowId) {
+        applicationId = rowId;
+        let data = saveLoadedData.filter((ele) => ele.id === rowId);
+        populateInputFields(data[0]);
+        saveOrUpdate = 1;
     }
 
     function populateInputFields(data) {
@@ -95,9 +92,49 @@
         document.querySelector('#notes').value = data.description != null ? data.description : 'Empty';
         document.querySelector('#txtWebsite').value = data.url;
         document.querySelector('#txtPrefix').value = data.prefix;
-        document.querySelector('#slctProject').value = data.projectID;
         document.querySelector('#btnSave').innerText = 'Update';
 
         $('#appModal').modal('toggle');
+    }
+
+    
+    document.querySelector('#btnSave').addEventListener('click', function () {
+
+        let postData = {
+            projectId: document.querySelector('#slctProject').value,
+            description: document.querySelector('#notes').value,
+            name: document.querySelector('#description').value,
+            prefix: document.querySelector('#txtPrefix').value,
+            url: document.querySelector('#txtWebsite').value
+        }
+
+        saveOrUpdate != 1 ? createApplication('/api/application/postapplication', postData) : updateApplication(`/api/application/putapplication/${applicationId}`, postData);
+
+    });
+
+    function reloadApplications() {
+        makeAPIRequest('/api/application/getapplicationbyprojectid/' + document.querySelector('#slctProject').value, 'GET', '', function (data) {
+            if (data) {
+                createAppsTable(JSON.parse(data), '#apps-tbody');
+            }
+        });
+    }
+
+    function createApplication(url, data) {
+        makeAPIRequest(url, 'POST', data, function (response) {
+            response = JSON.parse(response)
+            console.log(response);
+            reloadApplications();
+            $('#appModal').modal('toggle');
+            messenger('success');
+        });
+    }
+
+    function updateApplication(url, data) {
+        makeAPIRequest(url, 'PUT', data, function (response) {
+            reloadApplications();
+            $('#appModal').modal('toggle');
+            messenger('success');
+        });
     }
 });
