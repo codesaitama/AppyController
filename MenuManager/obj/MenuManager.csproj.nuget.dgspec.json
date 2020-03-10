@@ -1,29 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\AppyController\\MenuManager\\MenuManager.csproj": {}
+    "C:\\Users\\Eachana\\Desktop\\Active Projects\\HCM Projects\\MenuManager\\MenuManager\\MenuManager.csproj": {}
   },
   "projects": {
-    "D:\\Project\\AppyController\\MenuManager\\MenuManager.csproj": {
+    "C:\\Users\\Eachana\\Desktop\\Active Projects\\HCM Projects\\MenuManager\\MenuManager\\MenuManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\AppyController\\MenuManager\\MenuManager.csproj",
+        "projectUniqueName": "C:\\Users\\Eachana\\Desktop\\Active Projects\\HCM Projects\\MenuManager\\MenuManager\\MenuManager.csproj",
         "projectName": "MenuManager",
-        "projectPath": "D:\\Project\\AppyController\\MenuManager\\MenuManager.csproj",
-        "packagesPath": "C:\\Users\\mensah\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\AppyController\\MenuManager\\obj\\",
+        "projectPath": "C:\\Users\\Eachana\\Desktop\\Active Projects\\HCM Projects\\MenuManager\\MenuManager\\MenuManager.csproj",
+        "packagesPath": "C:\\Users\\Eachana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eachana\\Desktop\\Active Projects\\HCM Projects\\MenuManager\\MenuManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mensah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eachana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 18.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },

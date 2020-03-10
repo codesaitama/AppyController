@@ -21,29 +21,9 @@ namespace MenuManager.HTTPServices
         }
         public async Task<string> MakeRequestAsync(string url, string method, object dataToSend = null){
             string data = null;
-
             HttpResponseMessage response = null;
-<<<<<<< HEAD
 
             switch (method){
-=======
-            switch (method)
-            {
-<<<<<<< HEAD
-                HttpResponseMessage response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    var responseContent = await response.Content.ReadAsStringAsync();
-                    data = JArray.Parse(responseContent);
-                    return data;
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-                {
-                    return data;
-                }
-
-=======
->>>>>>> 24a183e0151fe90d249b04d2d3d70db31b1752c4
                 case "GET":
                     response = await client.GetAsync(url);
                     break;
@@ -60,7 +40,6 @@ namespace MenuManager.HTTPServices
             if (response.IsSuccessStatusCode){
                 var responseContent = await response.Content.ReadAsStringAsync();
                 data = responseContent;
->>>>>>> 8c4ea296689fd4fd3f5b277e0baaf9057221015f
             }
             else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Unauthorized){
                 return "Unauthorized";
