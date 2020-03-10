@@ -63,5 +63,12 @@ namespace MenuManager.Controllers
             var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Applications/UpdateApplication/{applicationId}";
             return await methodAPIRequest.MakeRequestAsync(endpoint, "PUT", data);
         }
+
+        [HttpGet("api/application/GetMenusByApplicationId/{applicationId}")]
+        public async Task<object> GetMenusByApplicationId(string applicationId)
+        {
+            var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Menus/GetMenusByApplicationId/{applicationId}";
+            return await methodAPIRequest.MakeRequestAsync(endpoint, "GET", null);
+        }
     }
 }
