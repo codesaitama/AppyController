@@ -22,12 +22,25 @@ namespace MenuManager.Controllers
         }
 
 
-        [HttpGet("home/project/getprojects")]
+        [HttpGet("api/project/getprojects")]
         public async Task<object> GetAllProjects()
-        {
-            var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Menus/GetAllMenus";
-            return await methodAPIRequest.GetRequestAsync(endpoint);
+        {   
+            var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Projects/GetAllProjects";
+            return await methodAPIRequest.MakeRequestAsync(endpoint, "GET", null);
         }
 
+        [HttpPost("api/project/postproject")]
+        public async Task<object> PostProject([FromBody]object data)
+        {
+            var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Projects/CreateProject";
+            return await methodAPIRequest.MakeRequestAsync(endpoint, "POST", data);
+        }
+
+        [HttpPut("api/project/putproject/{projectId}")]
+        public async Task<object> PutProject([FromBody]object data, string projectId)
+        {
+            var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Projects/{projectId}";
+            return await methodAPIRequest.MakeRequestAsync(endpoint, "PUT", data);
+        }
     }
 }
