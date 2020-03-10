@@ -21,15 +21,11 @@ namespace MenuManager.Controllers
             Configuration = configuration;
         }
 
-        [HttpGet("appi/project/getprojects")]
+
+        [HttpGet("api/project/getprojects")]
         public async Task<object> GetAllProjects()
-<<<<<<< HEAD
-        {
-            var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Projects/GetAllProjects";
-=======
         {   
             var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Projects/GetAllProjects";
->>>>>>> a083fdf935fac5c7bab4be8e8149fa2cc4368ad5
             return await methodAPIRequest.MakeRequestAsync(endpoint, "GET", null);
         }
 
