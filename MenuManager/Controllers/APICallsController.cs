@@ -23,30 +23,49 @@ namespace MenuManager.Controllers
 
         [HttpGet("appi/project/getprojects")]
         public async Task<object> GetAllProjects()
+<<<<<<< HEAD
         {
             var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Projects/GetAllProjects";
+=======
+        {   
+            var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Projects/GetAllProjects";
+>>>>>>> a083fdf935fac5c7bab4be8e8149fa2cc4368ad5
             return await methodAPIRequest.MakeRequestAsync(endpoint, "GET", null);
         }
 
         [HttpPost("api/project/postproject")]
         public async Task<object> PostProject([FromBody]object data)
         {
-            var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Projects/CreateProject";
+            var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Projects/CreateProject";
             return await methodAPIRequest.MakeRequestAsync(endpoint, "POST", data);
         }
 
         [HttpPut("api/project/putproject/{projectId}")]
         public async Task<object> PutProject([FromBody]object data, string projectId)
         {
-            var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Projects/{projectId}";
+            var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Projects/{projectId}";
             return await methodAPIRequest.MakeRequestAsync(endpoint, "PUT", data);
         }
 
         [HttpGet("api/application/getapplicationbyprojectid/{projectId}")]
         public async Task<object> GetApplicationsByProjectId(string projectId)
         {
-            var endpoint = $"{Configuration["APISETTINGS:MenuServiceAPI"]}Applications/spGetAllApplicationByProjectId/{projectId}";
+            var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Applications/spGetAllApplicationByProjectId/{projectId}";
             return await methodAPIRequest.MakeRequestAsync(endpoint, "GET", null);
+        }
+
+        [HttpPost("api/application/postapplication")]
+        public async Task<object> CreateApplication([FromBody]object data)
+        {
+            var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Applications/CreateApplication";
+            return await methodAPIRequest.MakeRequestAsync(endpoint, "POST", data);
+        }
+
+        [HttpPut("api/application/putapplication/{applicationId}")]
+        public async Task<object> UpdateApplication([FromBody]object data, string applicationId)
+        {
+            var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Applications/UpdateApplication/{applicationId}";
+            return await methodAPIRequest.MakeRequestAsync(endpoint, "PUT", data);
         }
     }
 }

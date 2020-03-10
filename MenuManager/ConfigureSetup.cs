@@ -15,8 +15,8 @@ namespace MenuManager
             Current = this;
         }
 
-        public String Authority { get; set; }
-        public String MenuServiceAPI { get; set; }
-        public String URLAPIService { get; set; }
+        public string Authority { get; set; }
+        public string HCMMenuBuilderMicroservice { get; set; }
+        public string HCMMenuBuilderCoreAPI { get; set; }
     }
 }
