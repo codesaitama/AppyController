@@ -106,7 +106,7 @@ function messenger(message) {
 }
 
 function GetCurrentPageName() {
-    var url = window.location.pathname;
+    let url = window.location.pathname;
     return url.substring(url.lastIndexOf('/') + 1);
 }
 
@@ -116,4 +116,8 @@ function lightMenu(page) {
     page ? page : page = 'dashboard'
     $('#' + page).addClass('active');
     $('#' + page + ' > a').addClass('active');
+}
+
+function enableDisable(s, id) {
+    Boolean(s) ? $(id).attr('disabled', false) : $(id).attr('disabled', true);
 }
