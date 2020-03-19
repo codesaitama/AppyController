@@ -14,7 +14,7 @@
     function loadForSelectBox(data) {
         data = JSON.parse(data);
 
-        let options = '<option value="-1" disabled selected >Select Project</option>';
+        var options = '<option value="-1" disabled selected >Select Project</option>';
         data.forEach((element) => {
             options += '<option value="' + element.id + '">' + element.projectName + '</option>';
         });
@@ -23,9 +23,7 @@
     }
 
     document.querySelector('#slctProject').addEventListener('change', function () {
-        enableDisable(0, '#btnAddApp');
         makeAPIRequest('/api/application/getapplicationbyprojectid/' + this.value, 'GET', '', function (data) {
-            enableDisable(1, '#btnAddApp');
             if (data) {
                 createAppsTable(JSON.parse(data), '#apps-tbody');
             }
@@ -69,7 +67,6 @@
     document.querySelector('#btnAddApp').addEventListener('click', function () {
         $('#appModal').modal('toggle');
         saveOrUpdate = 0;
-        clearFields();
         document.querySelector('#btnSave').innerText = 'Add';
     });
 
@@ -88,14 +85,6 @@
         let data = saveLoadedData.filter((ele) => ele.id === rowId);
         populateInputFields(data[0]);
         saveOrUpdate = 1;
-    }
-
-    function clearFields() {
-        document.querySelector('textarea').value = "";
-        document.querySelector('select').value = -1;
-        document.querySelector('#description').value = "";
-        document.querySelector('#txtWebsite').value = "";
-        document.querySelector('#txtPrefix').value = "";
     }
 
     function populateInputFields(data) {
