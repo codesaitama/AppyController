@@ -11,7 +11,7 @@ using Newtonsoft.Json.Linq;
 
 namespace MenuManager.Controllers
 {
-    
+
     public class APICallsController : ControllerBase
     {
         MethodAPIRequest methodAPIRequest = new MethodAPIRequest();
@@ -24,7 +24,7 @@ namespace MenuManager.Controllers
 
         [HttpGet("api/project/getprojects")]
         public async Task<object> GetAllProjects()
-        {   
+        {
             var endpoint = $"{Configuration["APISETTINGS:HCMMenuBuilderMicroservice"]}Projects/GetAllProjects";
             return await methodAPIRequest.MakeRequestAsync(endpoint, "GET", null);
         }
