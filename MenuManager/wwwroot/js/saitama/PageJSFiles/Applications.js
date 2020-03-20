@@ -92,7 +92,6 @@
 
     function clearFields() {
         document.querySelector('textarea').value = "";
-        document.querySelector('select').value = -1;
         document.querySelector('#description').value = "";
         document.querySelector('#txtWebsite').value = "";
         document.querySelector('#txtPrefix').value = "";

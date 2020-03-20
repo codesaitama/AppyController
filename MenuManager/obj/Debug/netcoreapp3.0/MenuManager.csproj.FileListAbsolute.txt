@@ -257,3 +257,4 @@ C:\Users\Eachana\Desktop\Active Projects\HCM Projects\MenuManager\MenuManager\ob
 C:\Users\Eachana\Desktop\Active Projects\HCM Projects\MenuManager\MenuManager\obj\Debug\netcoreapp3.0\MenuManager.csproj.CopyComplete
 C:\Users\Eachana\Desktop\Active Projects\HCM Projects\MenuManager\MenuManager\obj\Debug\netcoreapp3.0\MenuManager.dll
 C:\Users\Eachana\Desktop\Active Projects\HCM Projects\MenuManager\MenuManager\obj\Debug\netcoreapp3.0\MenuManager.pdb
+C:\Users\Eachana\Desktop\Active Projects\HCM Projects\MenuManager\MenuManager\obj\Debug\netcoreapp3.0\MenuManager.genruntimeconfig.cache
