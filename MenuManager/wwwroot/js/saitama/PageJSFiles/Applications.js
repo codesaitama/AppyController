@@ -14,7 +14,7 @@
     function loadForSelectBox(data) {
         data = JSON.parse(data);
 
-        let options = '<option value="-1" disabled selected >Select Project</option>';
+        var options = '<option value="-1" disabled selected >Select Project</option>';
         data.forEach((element) => {
             options += '<option value="' + element.id + '">' + element.projectName + '</option>';
         });
@@ -23,9 +23,7 @@
     }
 
     document.querySelector('#slctProject').addEventListener('change', function () {
-        enableDisable(0, '#btnAddApp');
         makeAPIRequest('/api/application/getapplicationbyprojectid/' + this.value, 'GET', '', function (data) {
-            enableDisable(1, '#btnAddApp');
             if (data) {
                 createAppsTable(JSON.parse(data), '#apps-tbody');
             }
@@ -69,7 +67,6 @@
     document.querySelector('#btnAddApp').addEventListener('click', function () {
         $('#appModal').modal('toggle');
         saveOrUpdate = 0;
-        clearFields();
         document.querySelector('#btnSave').innerText = 'Add';
     });
 
@@ -90,6 +87,7 @@
         saveOrUpdate = 1;
     }
 
+<<<<<<< HEAD
     function clearFields() {
         document.querySelector('textarea').value = "";
         document.querySelector('#description').value = "";
@@ -97,6 +95,8 @@
         document.querySelector('#txtPrefix').value = "";
     }
 
+=======
+>>>>>>> 845c9f533b09e017e06ac47a189bb5694d3c9982
     function populateInputFields(data) {
         document.querySelector('#description').value = data.name;
         document.querySelector('#notes').value = data.description != null ? data.description : 'Empty';

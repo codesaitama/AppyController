@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\Projects\\HCM Projects_\\MenuManager\\MenuManager\\MenuManager.csproj": {}
   },
   "projects": {
@@ -12,23 +13,40 @@
         "projectPath": "E:\\Projects\\HCM Projects_\\MenuManager\\MenuManager\\MenuManager.csproj",
         "packagesPath": "C:\\Users\\eachana\\.nuget\\packages\\",
         "outputPath": "E:\\Projects\\HCM Projects_\\MenuManager\\MenuManager\\obj\\",
+=======
+    "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\MenuManager.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\MenuManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\MenuManager.csproj",
+        "projectName": "MenuManager",
+        "projectPath": "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\MenuManager.csproj",
+        "packagesPath": "C:\\Users\\mensah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\obj\\",
+>>>>>>> 845c9f533b09e017e06ac47a189bb5694d3c9982
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\eachana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\mensah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 845c9f533b09e017e06ac47a189bb5694d3c9982
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp2.2": {
             "projectReferences": {}
           }
         },
@@ -39,25 +57,24 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp2.2": {
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[2.2.0, )",
+              "autoReferenced": true
             },
-            "Microsoft.Extensions.Logging.Debug": {
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[2.2.0, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[2.2.0, )",
+              "autoReferenced": true
             }
           },
           "imports": [
@@ -70,6 +87,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+<<<<<<< HEAD
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
@@ -97,6 +115,9 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+>>>>>>> 845c9f533b09e017e06ac47a189bb5694d3c9982
         }
       }
     }

@@ -12,18 +12,20 @@ namespace MenuManager.HTTPServices
 {
     public class MethodAPIRequest : HelperInterface
     {
-
         static readonly HttpClient client = new HttpClient();
         public IConfiguration Configuration { get; set; }
-        public MethodAPIRequest(){}
-        public MethodAPIRequest(IConfiguration configuration){
+        public MethodAPIRequest() { }
+        public MethodAPIRequest(IConfiguration configuration)
+        {
             Configuration = configuration;
         }
-        public async Task<string> MakeRequestAsync(string url, string method, object dataToSend = null){
+        public async Task<string> MakeRequestAsync(string url, string method, object dataToSend = null)
+        {
             string data = null;
             HttpResponseMessage response = null;
 
-            switch (method){
+            switch (method)
+            {
                 case "GET":
                     response = await client.GetAsync(url);
                     break;
@@ -37,11 +39,13 @@ namespace MenuManager.HTTPServices
                     response = await client.DeleteAsync(url);
                     break;
             }
-            if (response.IsSuccessStatusCode){
+            if (response.IsSuccessStatusCode)
+            {
                 var responseContent = await response.Content.ReadAsStringAsync();
                 data = responseContent;
             }
-            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Unauthorized){
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
                 return "Unauthorized";
             }
             return data;
