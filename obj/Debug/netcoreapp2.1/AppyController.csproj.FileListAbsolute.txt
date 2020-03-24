@@ -37,3 +37,42 @@ E:\Projects\Sample\AppyController\obj\Debug\netcoreapp2.1\AppyController.pdb
 E:\Projects\Sample\AppyController\obj\Debug\netcoreapp2.1\AppyController.genruntimeconfig.cache
 E:\Projects\Sample\AppyController\obj\Debug\netcoreapp2.1\AppyController.csproj.CopyComplete
 E:\Projects\Sample\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Home\Applications.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.csprojAssemblyReference.cache
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.csproj.CoreCompileInputs.cache
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.RazorAssemblyInfo.cache
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.RazorAssemblyInfo.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.AssemblyInfoInputs.cache
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.AssemblyInfo.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.dll
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.pdb
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\appsettings.Development.json
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\appsettings.json
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\AppyController.deps.json
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\AppyController.runtimeconfig.json
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\AppyController.runtimeconfig.dev.json
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\AppyController.dll
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\AppyController.pdb
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\AppyController.Views.dll
+E:\Projects\HCM Projects_\AppyController\bin\Debug\netcoreapp2.1\AppyController.Views.pdb
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.TagHelpers.input.cache
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.TagHelpers.output.cache
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.RazorCoreGenerate.cache
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Home\Applications.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Home\Menus.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Home\Projects.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.RazorTargetAssemblyInfo.cache
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.RazorTargetAssemblyInfo.cs
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.Views.pdb
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.genruntimeconfig.cache
+E:\Projects\HCM Projects_\AppyController\obj\Debug\netcoreapp2.1\AppyController.csproj.CopyComplete
