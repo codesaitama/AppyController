@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "restore": {
+<<<<<<< HEAD
+    "E:\\Projects\\HCM Projects_\\MenuManager\\MenuManager\\MenuManager.csproj": {}
+  },
+  "projects": {
+    "E:\\Projects\\HCM Projects_\\MenuManager\\MenuManager\\MenuManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\HCM Projects_\\MenuManager\\MenuManager\\MenuManager.csproj",
+        "projectName": "MenuManager",
+        "projectPath": "E:\\Projects\\HCM Projects_\\MenuManager\\MenuManager\\MenuManager.csproj",
+        "packagesPath": "C:\\Users\\eachana\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\HCM Projects_\\MenuManager\\MenuManager\\obj\\",
+=======
+    "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\MenuManager.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\MenuManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\MenuManager.csproj",
+        "projectName": "MenuManager",
+        "projectPath": "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\MenuManager.csproj",
+        "packagesPath": "C:\\Users\\mensah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mensah\\source\\repos\\MenuManager\\MenuManager\\obj\\",
+>>>>>>> 845c9f533b09e017e06ac47a189bb5694d3c9982
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+<<<<<<< HEAD
+          "C:\\Users\\eachana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\mensah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 845c9f533b09e017e06ac47a189bb5694d3c9982
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+<<<<<<< HEAD
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.3, 3.0.3]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+>>>>>>> 845c9f533b09e017e06ac47a189bb5694d3c9982
+        }
+      }
+    }
+  }
+}
