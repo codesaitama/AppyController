@@ -44,6 +44,8 @@ namespace AppyController
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+
+            // Version 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
